@@ -183,9 +183,9 @@ export default class MaskLayer extends CanvasLayer {
     // Update local pointer
     this.pointer = stop;
     // Prevent calling update when no lights loaded
-    if (!canvas.sight?.light?.los?.geometry) return;
+    if (!canvas.effects.visibility?.light?.los?.geometry) return;
     // Update sight layer
-    canvas.sight.refresh();
+    canvas.effects.visibility.refresh();
   }
 
   /**

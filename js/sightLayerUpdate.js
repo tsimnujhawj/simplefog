@@ -1,5 +1,5 @@
 /*
- * Monkeypatch for core canvas.sight.update() that implements autovisibility
+ * Monkeypatch for core canvas.effects.visibility.update() that implements autovisibility
  */
 import { readPixel } from './helpers.js';
 
@@ -45,7 +45,7 @@ function _setPlaceableVisibility(placeable) {
 }
 
 /*
-  * Extends canvas.sight.update() to set visibility for placeables based on simplefog
+  * Extends canvas.effects.visibility.update() to set visibility for placeables based on simplefog
   */
 export default function sightLayerUpdate() {
   // Skip checking placeables if simplefog not visible anyway

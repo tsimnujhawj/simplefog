@@ -206,14 +206,14 @@ export default class SimplefogLayer extends MaskLayer {
     // React to composite history change
     if (hasProperty(data, `flags.${this.layername}.history`)) {
       canvas[this.layername].renderStack(data.flags[this.layername].history);
-      canvas.sight.refresh();
+      canvas.effects.visibility.refresh();
     }
     // React to autoVisibility setting changes
     if (
       hasProperty(data, `flags.${this.layername}.autoVisibility`)
       || hasProperty(data, `flags.${this.layername}.vThreshold`)
     ) {
-      canvas.sight.refresh();
+      canvas.effects.visibility.refresh();
     }
     // React to alpha/tint changes
     if (!game.user.isGM && hasProperty(data, `flags.${this.layername}.playerAlpha`)) {

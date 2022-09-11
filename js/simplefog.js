@@ -72,5 +72,5 @@ Hooks.once('ready', () => {
   SimplefogVersionNotification.checkVersion()
 
   //Hooks.on('sightRefresh', sightLayerUpdate);
-  canvas.sight.refresh();
+  canvas.effects.visibility.refresh();
 });

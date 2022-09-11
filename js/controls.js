@@ -152,7 +152,7 @@ function toggleSimpleFog() {
 
 function toggleOffSimpleFog() {
   canvas.simplefog.toggle();
-  canvas.sight.refresh();
+  canvas.effects.visibility.refresh();
 }
 
 function cancelToggleSimpleFog(result = undefined) {

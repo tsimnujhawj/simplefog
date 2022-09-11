@@ -396,14 +396,16 @@ export default class MaskLayer extends CanvasLayer {
    * Actions upon layer becoming active
    */
   activate() {
-    this.interactiveChildren = true;
+    super.activate();
+    this.interactive = true;
   }
 
   /**
    * Actions upon layer becoming inactive
    */
   deactivate() {
-    this.interactiveChildren = false;
+    super.deactivate();
+    this.interactive = false;
   }
 
   async draw() {
